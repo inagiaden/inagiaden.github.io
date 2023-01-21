@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>VSC在windows&amp;Linux下配置golang环境 | Haoran Tung's BLOG</title><meta name="author" content="Tung HaoRan"><meta name="copyright" content="Tung HaoRan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="VSC 简介： VSCode 的全称是 Visual Studio Code，是微软于 2015 年发布的一款免费开源的现代化轻量级代码编辑器。 1.VSCode 的下载  VsCode 的官网为：VSC 官网进入官网如下： VsCode 文件大概大小在 *60M,*下载完成之后，根据提示进行选择和安装即可。 &#x2F;&#x2F;如果是 32 位处理器，请下载 Windows×32，Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VSC在windows&amp;Linux下配置golang环境">
+<meta property="og:url" content="https://www.depth.su/2023/01/21/3/index.html">
+<meta property="og:site_name" content="Haoran Tung&#39;s BLOG">
+<meta property="og:description" content="VSC 简介： VSCode 的全称是 Visual Studio Code，是微软于 2015 年发布的一款免费开源的现代化轻量级代码编辑器。 1.VSCode 的下载  VsCode 的官网为：VSC 官网进入官网如下： VsCode 文件大概大小在 *60M,*下载完成之后，根据提示进行选择和安装即可。 &#x2F;&#x2F;如果是 32 位处理器，请下载 Windows×32，Linux">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg">
+<meta property="article:published_time" content="2023-01-21T02:11:03.000Z">
+<meta property="article:modified_time" content="2023-01-21T04:08:17.834Z">
+<meta property="article:author" content="Tung HaoRan">
+<meta property="article:tag" content="Go">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg"><link rel="shortcut icon" href="https://i.postimg.cc/jd5fYjML/77d8ef967a229b28.jpg"><link rel="canonical" href="https://www.depth.su/2023/01/21/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-FCTHK70HWL"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FCTHK70HWL');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":250},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'VSC在windows&Linux下配置golang环境',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-01-21 12:08:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="baidu-site-verification" content="codeva-y73dRWadIp" /><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Haoran Tung's BLOG"><img class="site-icon" src="https://i.postimg.cc/jd5fYjML/77d8ef967a229b28.jpg"/><span class="site-name">Haoran Tung's BLOG</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">VSC在windows&amp;Linux下配置golang环境</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-21T02:11:03.000Z" title="发表于 2023-01-21 10:11:03">2023-01-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-21T04:08:17.834Z" title="更新于 2023-01-21 12:08:17">2023-01-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="VSC在windows&amp;Linux下配置golang环境"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><em>VSC</em> 简介：</p>
+<p><em>VSCode</em> 的全称是 <em>Visual Studio Code</em>，是微软于 <em>2015</em> 年发布的一款免费开源的现代化轻量级代码编辑器。</p>
+<p><em>1.VSCode</em> 的下载</p>
+<p><img src="/images/3/image19.jpg"></p>
+<p><em>VsCode</em> 的官网为：<em>VSC</em> 官网进入官网如下：</p>
+<p><em>VsCode</em> 文件大概大小在 *60M,*下载完成之后，根据提示进行选择和安装即可。</p>
+<p><em>&#x2F;&#x2F;<em>如果是 <em>32</em> 位处理器，请下载 <em>Windows</em>×</em>32</em>，<em>Linux</em> 同理。这里推荐下载稳定版</p>
+<p>*2,*安装</p>
+<p><em>Windows</em> 端为 <em>msi</em> 或 <em>exe</em> 安装包，相信大家都能搞定</p>
+<p><em>Linux</em> 根据系统包管理器选择，如果不明白可以去 <em>Google</em> 相应的方法，比如 <em>deb</em> 包使用</p>
+<p><em>dpkg -i xxxxxx.deb</em> 安装</p>
+<p><em>3</em>，设置语言为中文（英文用户忽略）</p>
+<p>下载完  <em>VsCode</em>，有些人不习惯用英文版，这时候我们要选择汉化语言包。其设置如下：</p>
+<p>*&lt;1&gt;*修改配置文件</p>
+<p>使用快捷键 <em>Ctrl + Shift + P</em>  或者选择 <em>VsCode</em> 菜单栏 <em>View</em> 点击 <em>Command Palette</em>，进入一个查找框。然后在框里搜索 【<em>configure</em>】会显示如下情况*:*</p>
+<p><img src="/images/3/image11.png"></p>
+<p>刚刚安装完，是仅有*”locale”:”en”*，这时我们将其替换成 <em>zh-CN</em>，然后保存重启。</p>
+<p>*&lt;2.&gt;*下载中文包</p>
+<p>如果我们在完成第一步的情况下，当前语言还是英文，则说明我们安装包不携带汉化包， 需要我们自己去下载。</p>
+<p>按快捷键 <em>Ctrl + Shift + X</em> 进入第三包插件下载，搜索【<em>chinese</em>】，如下：（<em>Linux</em> 需要根据软件设置一步一步找到这个选项）<img src="/images/3/image10.png"></p>
+<p>然后重启便汉化完成。这时我们可以在计算机硬盘或优盘上创建一个专门存放 <em>Go</em> 代码的文件夹，这样方便管理。建议路径为纯英文</p>
+<p>*4,*下载 <em>Go</em> 语言包</p>
+<p><em>Golang</em> 官网地址为：<em><a target="_blank" rel="noopener" href="https://golang.org/">https://golang.org</a></em> 或者 <em><a target="_blank" rel="noopener" href="https://golang.google.cn/">https://golang.google.cn</a></em> 以及 <em>Go</em> 语言中文网</p>
+<p>选择你所需要的 <em>Go</em> 语言版本， 推荐下载*.zip* 压缩包*.<em>或者</em>.msi* 也可以。（ 注意对应的</p>
+<p><em>windows&#x2F;linux</em> 以及系统架构）</p>
+<p><img src="/images/3/image13.jpg"></p>
+<p><img src="/images/3/image8.jpg"></p>
+<p>这里以*.zip* 为例，下载之后解压得到一个 <em>go</em> 文件夹</p>
+<p><img src="/images/3/image6.png"></p>
+<p>此时，我们进去 <em>DOS</em> 检查 <em>go</em> 是否安装成功。（<em>Linux</em> 直接跳到下一步）<em>Win+R</em> 输入 <em>cmd</em> 回车        进        去        命        令        行</p>
+<p><img src="/images/3/image15.png"></p>
+<p>在我们解压缩后的 <em>go</em> 文件夹里有一个 <em>bin</em> 子文件夹，进去 <em>bin</em> 文件夹后复制当前路径，如</p>
+<p><em>F:&#x2F;go&#x2F;bin</em></p>
+<p><img src="/images/3/image18.png"></p>
+<p>复制之后回到命令行，输入 <em>cd</em> 粘贴目录如 <em>cd        F:&#x2F;go&#x2F;bin</em> 然后回车。</p>
+<p><img src="/images/3/image17.png"></p>
+<p>输入 <em>go</em> 文件所在盘盘符加冒号，如 <em>f:</em> 然后回车</p>
+<p><img src="/images/3/image21.png"></p>
+<p>输入 <em>dir</em> 回车，此时会显示几个文件，和 <em>bin</em> 文件夹里的一样<img src="/images/3/image9.png"></p>
+<p>然后，输入 <em>go version</em> 然后回车，如果成功输出，则说明安装成功。</p>
+<p>（</p>
+<p><img src="/images/3/image20.png"></p>
+<p><em>5,<em>配置环境变量（</em>msi</em> 安装的用户应该可以跳过）</p>
+<p>我们需要配置三个基础环境变量，<em>GOROOT</em>，<em>Path</em>，<em>GOPATH 1</em>）主屏幕点击计算机，单击鼠标左键，点击属性。<img src="/images/3/image1.jpg"></p>
+<ol start="2">
+<li>点击高级系统设置，点击环境变量</li>
+</ol>
+<p><img src="/images/3/image22.png"></p>
+<ol start="3">
+<li>这时会出现两个变量类型，一个是 <em>Administration</em>  用户变量，另一个是系统变量。</li>
+<li>我们在系统变量下面，点击新建</li>
+</ol>
+<p><img src="/images/3/image24.png"></p>
+<p>变量名为 <em>GOROOT</em> 变量值填你的 <em>go</em> 解压之后的文件所在目录，如 <em>F:&#x2F;go</em> 点击确定，第一个变量就配置好了。</p>
+<p><img src="/images/3/image23.png"></p>
+<ol start="5">
+<li>然后，<em>Path</em> 环境变量就不用新建，一遍电脑里都有，在系统变量里找到 <em>Path</em>，选中后点编辑，此时如果显示</li>
+</ol>
+<p>图</p>
+<p>那么，输入 <em>;%GOROOT%\bin</em> 点击确定。如果显示这样</p>
+<p><img src="/images/3/image3.png"></p>
+<p>那么，<em>Path</em> 里面新建，再输入 <em>;%GOROOT%\bin</em></p>
+<ol start="6">
+<li>系统变量，点击新建，变量名为 <em>GOPATH</em> 变量值为你将来存放 <em>go</em> 程序的目录，比如我在 <em>F</em> 盘里新建一个名为 <em>Go project</em> 的文件夹来存放我的 <em>go</em> 代码。那么变量值就为 <em>Goproject</em> 文件夹所在目录 <em>F:&#x2F;Goproject</em> 点击确定，这样就配置好了。<img src="/images/3/image2.png"></li>
+</ol>
+<p>现在检测是否配置成功，<em>Win+R</em>，输入 <em>cmd</em> 进去命令行，输入 <em>go version</em> 回车，如果有输出，则配置成功。</p>
+<p><img src="/images/3/image26.png"></p>
+<p><em>Linux</em> 端直接进入命令行，编辑*&#x2F;etc&#x2F;profile* 文件，将上面提到的目录直接写入例如</p>
+<p><em>export GOROOT&#x3D;&#x2F;usr&#x2F;local&#x2F;go</em></p>
+<p><em>export GOPATH&#x3D;&#x2F;home&#x2F;bruce&#x2F;goProject export PATH&#x3D;$PATH:$GOROOT&#x2F;bin export PATH&#x3D;$PATH:$GOPATH&#x2F;bin</em></p>
+<p>目录根据实际情况更改，然后保存文件并执行 <em>source &#x2F;etc&#x2F;profile</em> 更新</p>
+<p>然后同样执行 <em>go version</em> 来检查</p>
+<p>这时，我们就可以用 <em>VSC</em> 写出 <em>golang</em> 的 <em>hello</em>，<em>world</em> 了。</p>
+<p><em>5.<em>输出 <em>Hello</em>，</em>World</em></p>
+<ol>
+<li>打开 <em>VSCode</em>，点击左上角文件→打开文件夹，我们在配置 <em>GOPATH</em> 变量时，不是创 建了一个名为 <em>Goproject</em> 的文件夹吗，此时就打开那个文件夹。可以在 <em>Goproject</em> 下创建子文件夹。也可以直接存放代码，不过这样不便于管理。<img src="/images/3/image25.jpg"></li>
+<li>用 <em>VScode</em> 打开文件夹后，我们新建一个 <em>hello.go</em> 文件。然后再输入 <em>hello</em>，<em>world</em> 的代码。输完后 <em>F5</em> 点击保存</li>
+</ol>
+<p>（可以安装 <em>go</em> 插件并在 <em>vsc</em> 内调试，但也局限于 <em>vsc)</em></p>
+<ol start="3">
+<li>在确保代码正确的前提下，如果代码有问题他会提示错误。我们 <em>Win+R</em>，输入 <em>cmd</em> 然后回车进去命令提示行，输入 <em>cd hello.go</em> 的目录，比如你刚才的 <em>hello.go</em> 放在 <em>F</em> 盘的<em>Goproject</em>     里 ， 那 么 你 就 输 入 <em>cd        F:&#x2F;Goproject</em> 然 后 回</li>
+</ol>
+<p>车。<img src="/images/3/image5.png"><img src="/images/3/image12.png"></p>
+<ol start="4">
+<li>输入 <em>dir</em> 回车，（<em>Linux</em> 是 *ls)*查看目录，里面就有我们这的 <em>hello.go</em> 文件<img src="/images/3/image6.png"></li>
+<li>输入 <em>go build hello.go</em> 然后回车（通用），<em>Linux</em> 建议使用 <em>go run</em> 直接输出</li>
+</ol>
+<p><img src="/images/3/image7.png"></p>
+<ol start="6">
+<li>在输入 <em>dir</em>，这时是不是生成了一个 <em>hello.exe</em> 文件（<em>Linux</em> 下可能是一个可执行文件）<img src="/images/3/image14.png"></li>
+<li>输入 <em>hello.exe</em> 然后回车，这时，如果正确，他就会输出 <em>hello,world Linux</em> 输入 <em>chmod +x hello</em></li>
+</ol>
+<p><em>.hello<img src="/images/3/image20.png"></em></p>
+<p>恭喜，你写出了震惊世界的 <em>hello</em>，<em>world</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.depth.su">Tung HaoRan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.depth.su/2023/01/21/3/">https://www.depth.su/2023/01/21/3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.depth.su" target="_blank">Haoran Tung's BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Go/">Go</a></div><div class="post_share"><div class="social-share" data-image="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/01/21/2/" title="How To Solve The Problem That Android12+ Automatically Ends The Process -PhantomProcessKiller"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">How To Solve The Problem That Android12+ Automatically Ends The Process -PhantomProcessKiller</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Tung HaoRan</div><div class="author-info__description">This is Haoran Tung's BLOG&#44;Thanks For Your Reading.I hope my Articles can help you. </div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/inagiaden"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/inagiaden" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:donghaoran@mail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=b2InsmvVEfKi353c7i8H3qnlDquSyusO&amp;noverify=0" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://www.facebook.com/inagi.aden" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a><a class="social-icon" href="https://twitter.com/HaoranTung" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/@donghaoran" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/21/3/" title="VSC在windows&amp;Linux下配置golang环境">VSC在windows&amp;Linux下配置golang环境</a><time datetime="2023-01-21T02:11:03.000Z" title="发表于 2023-01-21 10:11:03">2023-01-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/21/2/" title="How To Solve The Problem That Android12+ Automatically Ends The Process -PhantomProcessKiller">How To Solve The Problem That Android12+ Automatically Ends The Process -PhantomProcessKiller</a><time datetime="2023-01-21T01:43:08.000Z" title="发表于 2023-01-21 09:43:08">2023-01-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/21/1/" title="How to fixs Pixel:&quot;Your device is corrupt....&quot;">How to fixs Pixel:&quot;Your device is corrupt....&quot;</a><time datetime="2023-01-21T01:11:42.000Z" title="发表于 2023-01-21 09:11:42">2023-01-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/17/hello-world/" title="Hello World">Hello World</a><time datetime="2023-01-17T15:01:57.168Z" title="发表于 2023-01-17 23:01:57">2023-01-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Tung HaoRan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
