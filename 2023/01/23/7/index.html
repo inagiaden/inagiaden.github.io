@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>如何在安卓手机上玩MC:JAVA | Dong HaoRan's BLOG</title><meta name="author" content="Tung HaoRan"><meta name="copyright" content="Tung HaoRan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言：对于不少想要在安卓手机上体验MC:JAVA版的MC玩家，这里我将尽力阐述详细的做法，如果有任何的问题，欢迎留言或发邮件示例1.16.5一，MC:Java 1.17及以后（由于1.17及以后的MC版本使用的Java版本与之前不同，所以我将分开叙述）准备：PojavLauncher app，Jre17&#x2F;aarch64 注意！！：这里请不要使用Google play下载，请访问开发者的g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在安卓手机上玩MC:JAVA">
+<meta property="og:url" content="https://www.depth.su/2023/01/23/7/index.html">
+<meta property="og:site_name" content="Dong HaoRan&#39;s BLOG">
+<meta property="og:description" content="前言：对于不少想要在安卓手机上体验MC:JAVA版的MC玩家，这里我将尽力阐述详细的做法，如果有任何的问题，欢迎留言或发邮件示例1.16.5一，MC:Java 1.17及以后（由于1.17及以后的MC版本使用的Java版本与之前不同，所以我将分开叙述）准备：PojavLauncher app，Jre17&#x2F;aarch64 注意！！：这里请不要使用Google play下载，请访问开发者的g">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg">
+<meta property="article:published_time" content="2023-01-22T16:52:53.000Z">
+<meta property="article:modified_time" content="2023-01-22T16:54:28.737Z">
+<meta property="article:author" content="Tung HaoRan">
+<meta property="article:tag" content="Android">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg"><link rel="shortcut icon" href="https://i.postimg.cc/jd5fYjML/77d8ef967a229b28.jpg"><link rel="canonical" href="https://www.depth.su/2023/01/23/7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-FCTHK70HWL"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FCTHK70HWL');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":250},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如何在安卓手机上玩MC:JAVA',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-01-23 00:54:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="baidu-site-verification" content="codeva-y73dRWadIp" /><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Dong HaoRan's BLOG"><img class="site-icon" src="https://i.postimg.cc/jd5fYjML/77d8ef967a229b28.jpg"/><span class="site-name">Dong HaoRan's BLOG</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">如何在安卓手机上玩MC:JAVA</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-22T16:52:53.000Z" title="发表于 2023-01-23 00:52:53">2023-01-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-22T16:54:28.737Z" title="更新于 2023-01-23 00:54:28">2023-01-23</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="如何在安卓手机上玩MC:JAVA"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>前言：对于不少想要在安卓手机上体验MC:JAVA版的MC玩家，这里我将尽力阐述详细的做法，如果有任何的问题，欢迎留言或发邮件<br><img src="https://postimg.cc/RWh8xjG9"><br>示例1.16.5<br>一，MC:Java 1.17及以后（由于1.17及以后的MC版本使用的Java版本与之前不同，所以我将分开叙述）<br>准备：PojavLauncher app，Jre17&#x2F;aarch64</p>
+<p>注意！！：这里请不要使用Google play下载，请访问开发者的<a target="_blank" rel="noopener" href="https://github.com/PojavLauncherTeam/PojavLauncher/actions?query=branch%253Av3_openjdk">github网站</a>以下载最新版的app，而且此版本会导致手机非常卡顿，甚至无法进入游戏！！目前不建议使用</p>
+<p>如果你不是很擅长github可以在<a target="_blank" rel="noopener" href="https://github.com/PojavLauncherTeam/PojavLauncher">这里</a>下载稳定版的<br>app-debug-norruntime.apk，注意是app-debug-norruntime.apk而不是app-debug.apk。<br>首先点击链接，然后滑倒最底端，如图点击最新版，然后再滑倒最底部，下载app-debug-norruntime.apk<br><img src="https://postimg.cc/yJSbkcwb"></p>
+<p><img src="https://postimg.cc/S2Ft8j4N"></p>
+<p>然后下载临时Jre17版本因为目前1.17是测试项目，不是很稳定<br>详细过程可以参考Pojav官方文档<br>注意绿色打勾的文件才能使用，此时下载文件需要登录github,账号自己注册</p>
+<p><img src="https://postimg.cc/FY66rDnS"><br>注意，要下载对应的版本<br><a target="_blank" rel="noopener" href="https://i.postimg.cc/4NtG4V4Q/1628430923037510-3.jpg">https://i.postimg.cc/4NtG4V4Q/1628430923037510-3.jpg</a><br>基本上所有人都应该选择下载jre17-aarch64,极少数人要根据自己手里架构下载对应版本。</p>
+<p>下载好软件和jre后，首先打开PojavLauncher软件，它会让你导入运行库，你就选择你下载的文件，因为下载的是zip文件，识别的是tar.gz文件，所以可能要点两次才能成功。</p>
+<p>然后将渲染器切换到 gl4es 1.1.5 - OpenGL ES 3。<br>你就可以享受MC:Java 1.17了！！</p>
+<p>以上是比较正规的做法，其实在官方github上的Action上有许多开发者上传的安装包中兼容了Jre17,直接下载这种未发布版本也是一种尝鲜的好办法，但我相信不久之后官方会推出稳定的1.17版本，现在还是1.16.5之类的玩玩就行了。</p>
+<p>二，MC:Java 1.17以前的版本</p>
+<p>准备：此时我们建议使用Google play下载PojavLauncher，不用下载其他文件，打开软件可直接下载对应的jar进行游戏。</p>
+<p>注释：<br>1,经本人验证，PojavLauncher界面和其他方面比Mcinabox好。<br>2, Google play下载的PojavLauncher对于1.16.5等版本的支持较好，可以流畅游玩。而配置过的1.17版本的软件几乎所有版本的优化都不是很好，不建议玩家尝试<br>3,对于无法使用微软登录PojavLauncher的用户，可能是因为你你的账号没有购买正版MC:Java.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">(java.lang.RuntimeException: Can&#x27;t login a demo account!</span><br><span class="line"></span><br><span class="line">MSA Error: 404: Not Found, error stream:</span><br><span class="line">&#123;</span><br><span class="line">&quot;path&quot; : &quot;/minecraft/profile&quot;,</span><br><span class="line">&quot;errorType&quot; : &quot;NOT_FOUND&quot;,</span><br><span class="line">&quot;error&quot; : &quot;NOT_FOUND&quot;,</span><br><span class="line">&quot;errorMessage&quot; : &quot;The server has not found anything matching the request URI&quot;,</span><br><span class="line">&quot;developerMessage&quot; : &quot;The server has not found anything matching the request URI&quot;</span><br><span class="line">&#125;</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.throwResponseError(Msa.java:292)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.checkMcProfile(Msa.java:256)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.acquireMinecraftToken(Msa.java:200)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.acquireXsts(Msa.java:167)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.acquireXBLToken(Msa.java:122)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.acquireAccessToken(Msa.java:75)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.Msa.&lt;init&gt;(Msa.java:35)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.MicrosoftAuthTask.doInBackground(MicrosoftAuthTask.java:72)</span><br><span class="line">at net.kdt.pojavlaunch.authenticator.microsoft.MicrosoftAuthTask.doInBackground(MicrosoftAuthTask.java:22)</span><br><span class="line">at android.os.AsyncTask$3.call(AsyncTask.java:394)</span><br><span class="line">at java.util.concurrent.FutureTask.run(FutureTask.java:266)</span><br><span class="line">at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:305)</span><br><span class="line">at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)</span><br><span class="line">at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)</span><br><span class="line">at java.lang.Thread.run(Thread.java:923)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://postimg.cc/BXMyyqTM"><br>4,所有的教程都是针对目前而言(2021.8.8),对于之前或之后的适用性无法保证</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://www.depth.su">Tung HaoRan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.depth.su/2023/01/23/7/">https://www.depth.su/2023/01/23/7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.depth.su" target="_blank">Dong HaoRan's BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Android/">Android</a></div><div class="post_share"><div class="social-share" data-image="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/01/23/8/" title="How to edit and run Golang on Android devices or termux"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">How to edit and run Golang on Android devices or termux</div></div></a></div><div class="next-post pull-right"><a href="/2023/01/23/6/" title="How to edit and upload code on local device to github"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">How to edit and upload code on local device to github</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/01/21/1/" title="How to fixs Pixel:&quot;Your device is corrupt....&quot;"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-21</div><div class="title">How to fixs Pixel:&quot;Your device is corrupt....&quot;</div></div></a></div><div><a href="/2023/01/21/2/" title="How To Solve The Problem That Android12+ Automatically Ends The Process -PhantomProcessKiller"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-21</div><div class="title">How To Solve The Problem That Android12+ Automatically Ends The Process -PhantomProcessKiller</div></div></a></div><div><a href="/2023/01/22/5/" title="如何在Android设备上安装Kali Linux发行版（无ROOT)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-22</div><div class="title">如何在Android设备上安装Kali Linux发行版（无ROOT)</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.postimg.cc/wMNv1T9X/56fbf5d92866cac6.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Tung HaoRan</div><div class="author-info__description">叶的飘落不是因为风的追求，而是因为没有树的挽留</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/inagiaden"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/inagiaden" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:donghaoran@mail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://qm.qq.com/cgi-bin/qm/qr?k=b2InsmvVEfKi353c7i8H3qnlDquSyusO&amp;noverify=0" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://www.facebook.com/inagi.aden" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a><a class="social-icon" href="https://twitter.com/HaoranTung" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/@donghaoran" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站正在维护🫣🫣</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/23/8/" title="How to edit and run Golang on Android devices or termux">How to edit and run Golang on Android devices or termux</a><time datetime="2023-01-22T16:53:03.000Z" title="发表于 2023-01-23 00:53:03">2023-01-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/23/7/" title="如何在安卓手机上玩MC:JAVA">如何在安卓手机上玩MC:JAVA</a><time datetime="2023-01-22T16:52:53.000Z" title="发表于 2023-01-23 00:52:53">2023-01-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/23/6/" title="How to edit and upload code on local device to github">How to edit and upload code on local device to github</a><time datetime="2023-01-22T16:19:16.000Z" title="发表于 2023-01-23 00:19:16">2023-01-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/22/5/" title="如何在Android设备上安装Kali Linux发行版（无ROOT)">如何在Android设备上安装Kali Linux发行版（无ROOT)</a><time datetime="2023-01-22T15:15:40.000Z" title="发表于 2023-01-22 23:15:40">2023-01-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/22/4/" title="Windows system uses TaskList to kill viruses">Windows system uses TaskList to kill viruses</a><time datetime="2023-01-22T14:37:19.000Z" title="发表于 2023-01-22 22:37:19">2023-01-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Tung HaoRan</div><div class="footer_custom_text">框架 Hexo | 服务器 Github</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
